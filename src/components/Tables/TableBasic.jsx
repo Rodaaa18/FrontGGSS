@@ -14,9 +14,9 @@ const TableBasic = ({columns}) => {
                   </tr>
               </thead>
               <tbody class="table-group-divider" id="cuerpodetabla">
-                  {columns.map(col => {
+                  {columns.map((col ,i) => {
                       return (
-                          <th scope="row" class="px-2">
+                          <th key={i} scope="row" class="px-2">
                               {col.toString() === "Predeterminado" ? <input type="checkbox" class="border-0 px-2" id="capitulo" placeholder={col}></input> : <input type="text" class="border-0 px-2" id="opcion2" placeholder={col}></input>}
                           </th>
                       )

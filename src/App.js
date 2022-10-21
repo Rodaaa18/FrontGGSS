@@ -10,7 +10,13 @@ import DatosPersonales from './components/DatosPersonales/DatosPersonales';
 import Domicilios from './components/Domicilios/Domicilios';
 
 
+
 function App() {
+  
+
+    
+        
+   
   return (
     <>
     <Navbar />

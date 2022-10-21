@@ -10,9 +10,9 @@ const DNICboBox = ({nameInput, messageError, placeHolder, array}) => {
         <div className='form__grupo__input1'>
             <select class=" " >
                 {
-                    array.map(op=>{
+                    array.map((op, i)=>{
                         return (
-                            <option>{op}</option>
+                            <option key={i}>{op}</option>
                         )
                     })
                 }
