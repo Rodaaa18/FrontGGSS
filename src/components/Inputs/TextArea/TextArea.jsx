@@ -4,7 +4,7 @@ const TextArea = ({inputName}) => {
   return (
     <div className='row'>
         <div className='form__grupo__label'>
-            <label className='form__grupo__label__label' for="legajo">{inputName}</label>
+            <label className='form__grupo__label__label' htmlFor="legajo">{inputName}</label>
         </div>
         <div className='form__grupo__input'>
             <textarea name="" id="" cols="61" rows="2"></textarea>

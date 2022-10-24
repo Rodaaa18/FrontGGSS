@@ -13,7 +13,7 @@ const Domicilios = () => {
     <section className='container'>
         <div className='row'>
             <div className="formulario__grupo">
-                <label for="usuario" className="mainABMTitle">Domicilios</label>
+                <label htmlFor="usuario" className="mainABMTitle">Domicilios</label>
             </div> 
             <div className='col-xl-6 '>
                 <div className='mt-2'>

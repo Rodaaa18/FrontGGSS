@@ -14,14 +14,30 @@ const DatosPersonales = () => {
     const optionsDNI = [ "DNI", "LC", "LE"];
 
     const estados = ["Activo", "Baja", "Suspendido", "Anulado"];
-    const estadosCiviles = ["Soltero", "Casado", "Viudo", "Algo"];
+    
+
+    const estadosCiviles = [{
+        "id" : 1,
+        "estado" : "Soltero"
+    },{
+        "id" : 2,
+        "estado" : "Casado" 
+    },{
+        "id" : 3,
+        "estado" : "Viudo"
+    },
+    {
+        "id" : 4,
+        "estado" : "Algo"
+    }];
+    console.log(estadosCiviles);
 
   return (
     
     <section className='container'>
         <div className='row'>
             <div className="formulario__grupo">
-                <label for="usuario" className="mainABMTitle">Datos Personales</label>
+                <label htmlFor="usuario" className="mainABMTitle">Datos Personales</label>
             </div> 
             <form action="" className='form__datos__personales'>
                 <div className="primera__columna">
@@ -29,10 +45,10 @@ const DatosPersonales = () => {
                     <InputForm nameInput="Apellido" messageError="Solo puede contener letras." placeHolder="Ingrese Apellidos"/>
                     <InputForm nameInput="Nombres" messageError="Solo puede contener letras." placeHolder="Ingrese Nombres"/>
                     <DNICboBox nameInput="DNI" messageError="Solo puede contener números, sin puntos." placeHolder="23456789" array={optionsDNI}/>
-                    <InputButton id="inputCuil" nameLabel="C.U.I.L" nameButton="Validar" placeholder="##-########-#" />
+                    <InputButton id="inputCuil" nameLabel="C.U.I.L" nameButton="Validar" placeholder="##-########-#" idModal="modalCuil" array={[]}/>
                     <InputForm nameInput="Teléfono"  messageError="Solo puede contener números." placeHolder="11352458965"/>
                     <InputButton id="inputEstadosCiviles" nameLabel="Estado Civil" nameButton="..." placeholder="Ingrese Estado Civil"  idModal="modalEstadosCiviles" array={estadosCiviles}/>
-                    <InputButton id="inputNacionalidad" nameLabel="Nacionalidad" nameButton="..." placeholder="Ingrese Nacionalidad" idModal=""/>
+                    <InputButton id="inputNacionalidad" nameLabel="Nacionalidad" nameButton="..." placeholder="Ingrese Nacionalidad" idModal="modalNacionalidades" array={[]}/>
                 </div>
                 <div className='segunda_columna'>
                     <InputCbo nameButton="Estados" nameLabel="Estado" array={estados} />
@@ -40,8 +56,8 @@ const DatosPersonales = () => {
                     <InputDate nameInput="Nacimiento" />
                     <InputForm nameInput="Móvil"  messageError="Solo puede contener números." placeHolder="Ingrese su celular"/>
                     <InputForm nameInput="E-mail"  messageError="Ingrese un email válido." placeHolder="correo@correo.com.ar"/>
-                    <InputButton id="inputPaisO" nameLabel="País de Origen" nameButton="..." placeholder="Ingrese su País de Origen" idModal=""/>
-                    <InputButton id="inputEstudios" nameLabel="Estudios" nameButton="..." placeholder="Ingrese sus Estudios" idModal=""/>
+                    <InputButton id="inputPaisO" nameLabel="País de Origen" nameButton="..." placeholder="Ingrese su País de Origen" idModal="modalPasiO" array={[]}/>
+                    <InputButton id="inputEstudios" nameLabel="Estudios" nameButton="..." placeholder="Ingrese sus Estudios" idModal="modalEstudios" array={[]}/>
                 </div>
             </form>
             <div className='row'>

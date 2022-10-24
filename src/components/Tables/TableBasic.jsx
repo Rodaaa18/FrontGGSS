@@ -3,21 +3,21 @@ import React from 'react'
 const TableBasic = ({columns}) => {
   return (
     <><div className='row mt-5'>
-          <table class="table-danger table-striped">
+          <table className="table-danger table-striped">
               <thead>
                   <tr>
                       {columns.map(col => {
                           return (
-                              <th scope="col" class="px-2">{col}</th>
+                              <th scope="col" className="px-2">{col}</th>
                           )
                       })}
                   </tr>
               </thead>
-              <tbody class="table-group-divider" id="cuerpodetabla">
+              <tbody className="table-group-divider" id="cuerpodetabla">
                   {columns.map((col ,i) => {
                       return (
-                          <th key={i} scope="row" class="px-2">
-                              {col.toString() === "Predeterminado" ? <input type="checkbox" class="border-0 px-2" id="capitulo" placeholder={col}></input> : <input type="text" class="border-0 px-2" id="opcion2" placeholder={col}></input>}
+                          <th key={i} scope="row" className="px-2">
+                              {col.toString() === "Predeterminado" ? <input type="checkbox" className="border-0 px-2" id="capitulo" placeholder={col}></input> : <input type="text" className="border-0 px-2" id="opcion2" placeholder={col}></input>}
                           </th>
                       )
                   })}

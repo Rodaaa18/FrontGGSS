@@ -5,7 +5,7 @@ const InputForm = ({nameInput, messageError, placeHolder}) => {
   return (
     <div className="formulario__grupo__inputs">
         <div className='form__grupo__label'>
-            <label className='form__grupo__label__label' for="legajo">{nameInput}</label>
+            <label className='form__grupo__label__label' htmlFor="legajo">{nameInput}</label>
         </div>
         <div className='form__grupo__input'>
             <input type="text" className='form__grupo__input' id="legajo" placeholder={placeHolder}/>

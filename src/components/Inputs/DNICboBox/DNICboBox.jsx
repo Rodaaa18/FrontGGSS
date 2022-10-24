@@ -5,10 +5,10 @@ const DNICboBox = ({nameInput, messageError, placeHolder, array}) => {
   return (
     <div className="formulario__grupo__inputs2">
         <div className="form__grupo__labels">
-            <label class="form__grupo__label__label">{nameInput}</label>
+            <label className="form__grupo__label__label">{nameInput}</label>
         </div> 
         <div className='form__grupo__input1'>
-            <select class=" " >
+            <select className=" " >
                 {
                     array.map((op, i)=>{
                         return (
@@ -22,7 +22,7 @@ const DNICboBox = ({nameInput, messageError, placeHolder, array}) => {
             <input type="text" className='form__input' placeholder={placeHolder}></input>
         </div>
         <div className='form__grupo__icons'>
-            <i class="fas fa-times-circle"></i>
+            <i className="fas fa-times-circle"></i>
         </div>
         <div className='form__grupo__errors'>
             <p>{messageError}</p>
